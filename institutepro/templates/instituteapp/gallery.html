@@ -1,0 +1,60 @@
+{% extends 'instituteapp/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block abc %}
+        <style>
+            img{
+                border: 1px red solid;
+                height: 200px;
+                margin-left: 20px;
+            }
+            .col-md-4{
+                border: 2px blue solid;
+            }
+            .row{
+                margin-top: 20px;
+            }
+        </style>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{% static 'images/india.jpg' %}" style="width: 90%">
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/wine5.jpg' %}" style="width: 90%">
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/india.jpg' %}" style="width: 90%">
+            </div>
+        </div><div class="row">
+            <div class="col-md-4">
+                <img src="{% static 'images/shahid.jpg' %}" style="width: 90%">
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/kajol.jpg' %}" style="width: 90%">
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/shahid.jpg' %}" style="width: 90%">
+            </div>
+        </div><div class="row">
+            <div class="col-md-4">
+                <img src="{% static 'images/sonakshi.jpg' %}" style="width: 90%">
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/amir.jpg' %}" style="width: 90%">
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/sonakshi.jpg' %}" style="width: 90%">
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+</body>
+</html>

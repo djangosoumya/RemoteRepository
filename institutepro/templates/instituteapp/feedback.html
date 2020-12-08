@@ -1,0 +1,69 @@
+{% extends 'instituteapp/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    
+    {% block abc %}
+    <style>
+        input[name]{
+            margin-top: -10px;
+        }
+        input[value]{
+            margin-top: 10px;
+        }
+        h4{
+            background-color: brown;
+            text-align: center;
+            color: white;
+        }
+        h6{
+            text-align: center;
+        }
+    </style>
+    <div class="container-fluid">
+        <div class='row'>
+            <div class="col-md-4">
+                <h4>Previous Feedbacks</h4>
+                {% if feedback %}
+                    {% for i in feedback %}
+                        {% if i.rating >= 6 %}
+                            <h5 style="color: red;text-align: center;">Name: {{ i.name }}</h5>
+                            <h6>Ratings: {{ i.rating }}</h6>
+                            <h6>Date: {{ i.date }}</h6>
+                            <h6>Feedback: {{ i.feedback }}</h6><br>
+                        {% endif %}
+                    {% endfor %}
+
+                {% else %}
+                <h3>No Data Available</h3>
+                {% endif %}
+            </div>
+            <div class="offdet-md-4 col-md-6">
+                <form method="POST">
+                     {% csrf_token %}
+                    <label>Enter Your Name:</label>
+                    <input type="text" name="name" class="form-control">
+
+                    <label>Enter Your Rating:</label>
+                    <input type="number" name="rating" class="form-control">
+
+                    <label>Enter Your Feedback:</label>
+                    <textarea type="text" name="feedback" class="form-control"></textarea>
+
+                    <center>
+                    <input type="submit" value="Submit" class="btn btn-success">
+                    <input type="reset" value="Clear" class="btn btn-danger">
+                    </center>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,85 @@
+{% extends 'instituteapp/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block abc %}
+        <style>
+            th,td{
+                border: 1px red solid;
+            }
+        </style>
+    <div class="container-fluid">
+        <div class="row">
+            <table class="table text-center">
+        <thead>
+            <tr>
+                <th style="border: 2px red solid">Course Name</th>
+                <th style="border: 2px red solid">Duration</th>
+                <th style="border: 2px red solid">Start Date</th>
+                <th style="border: 2px red solid">Timing</th>
+                <th style="border: 2px red solid">Trainer</th>
+                <th style="border: 2px red solid">Exp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Python</td>
+                <td>2 months</td>
+                <td>10-Nov-2020</td>
+                <td>9am to 10am</td>
+                <td>Narayana Sir</td>
+                <td>9 Years</td>
+            </tr>
+            <tr>
+                <td>Django</td>
+                <td>2 months</td>
+                <td>10-Nov-2020</td>
+                <td>8am to 9am</td>
+                <td>Narayana Sir</td>
+                <td>9 Years</td>
+            </tr>
+            <tr>
+                <td>Flask</td>
+                <td>45 Days</td>
+                <td>20-Nov-2020</td>
+                <td>10am to 11am</td>
+                <td>Narayana Sir</td>
+                <td>9 Years</td>
+            </tr>
+
+            <tr>
+                <td>Rest Api</td>
+                <td>30 Days</td>
+                <td>15-Nov-2020</td>
+                <td>7pm to 8pm</td>
+                <td>Srinibas Sir</td>
+                <td>4 Years</td>
+            </tr>
+            <tr>
+                <td>UI</td>
+                <td>45 Days</td>
+                <td>22-Nov-2020</td>
+                <td>5pm to 6pm</td>
+                <td>Srinibas Sir</td>
+                <td>4 Years</td>
+            </tr>
+            <tr>
+                <td>Database</td>
+                <td>2 Months</td>
+                <td>12-Nov-2020</td>
+                <td>11am to 12pm</td>
+                <td>Srinibas Sir</td>
+                <td>9 Years</td>
+            </tr>
+        </tbody>
+    </table>
+        </div>
+    </div>
+
+    {% endblock %}
+
+</body>

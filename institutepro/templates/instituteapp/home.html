@@ -1,0 +1,42 @@
+{% extends 'instituteapp/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {% block abc %}
+        <style>
+        h4{
+            color: red;
+        }
+        p{
+            color: navy;
+            text-indent: 20px;
+            margin-left: 10px;
+        }
+</style>
+
+        <h4><U>About Founder:</U></h4>
+        <p>STH owes its existence to the vision of its founder Er. Soumya Ranjan Dash who, with no land, limited
+            finances (only Rs. 5000/-) and little knowledge of higher education to create an institution for
+            the benefit of the society.</p>
+        <h4><u>About Organisation:</u></h4>
+        <p>STH Training Institute has World Class Lab facilities located in the heart of
+            the city of Hyderabad & Chennai.</p>
+        <h4><u>Infrastructure:</u></h4>
+        <p>Soumya Tech House Training Institute has World Class Lab facilities located in the heart of the city of
+            Hyderabad & Chennai. World Class Software Training Lab having modern classroom equipped with
+            latest teaching aids. Full fledged Software Lab with state-of-the-art PCs connected in
+            network and Open Source/Development software.</p>
+        <h4><u>Vision & Mission:</u></h4>
+        <p>To enrich the knowledge & skill sets of young software engineers by providing value
+            added training in the areas of Software Development & Testing.
+            To serve the industries by providing trained human resources in the above areas.</p>
+
+    {% endblock %}
+
+</body>
+</html>
